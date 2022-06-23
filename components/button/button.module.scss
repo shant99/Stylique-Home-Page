@@ -1,0 +1,21 @@
+@import '../../styles/scss/mixins.scss';
+@import '../../styles/scss/variables.scss';
+// default
+.button-{
+    border: none;
+    background-color: white;
+    @include flex(center , center);
+}
+
+
+// transparent
+.button-transparent{
+    @include font-style(16px , 400 ,$primary-color2 , 'EudoxusSansLight');
+    @include flex(center , center);
+    border: none;
+    background-color: transparent;
+    border: 1px solid transparent
+}
+.button-transparent-active{
+    border-bottom: 1px solid black;
+}

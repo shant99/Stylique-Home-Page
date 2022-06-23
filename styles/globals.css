@@ -1,16 +1,45 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+	font-family: 'EudoxusSansLight'; 
+	src: url('../fonts/Eudoxus-Sans-font/EudoxusSans-ExtraLight.ttf'); 
+}
+@font-face {
+	font-family: 'EudoxusSansRegular'; 
+	src: url('../fonts/Eudoxus-Sans-font/EudoxusSans-Regular.ttf'); 
+}
+@font-face {
+	font-family: 'EudoxusSansMedium'; 
+	src: url('../fonts/Eudoxus-Sans-font/EudoxusSans-Medium.ttf'); 
+}
+@font-face {
+	font-family: 'EudoxusSansBold'; 
+	src: url('../fonts/Eudoxus-Sans-font/EudoxusSans-Bold.ttf'); 
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+	color: black;
+}
+button{
+    cursor: pointer;
+}
+ul,li,ol{
+    list-style: none;
+}
+body{
+	z-index: 0;
+	scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
+
+@media (max-width: 920px){
+	body.lock{
+		/* overflow: hidden; */
+	}
 }

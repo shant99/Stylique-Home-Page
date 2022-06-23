@@ -1,0 +1,13 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.under-header-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include flex(center , center)
+}
+.under-header{
+    height: 600px;
+    width: 100%;
+    
+}

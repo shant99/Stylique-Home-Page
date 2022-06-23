@@ -1,0 +1,15 @@
+@import '../../styles/scss/mixins.scss';
+@import '../../styles/scss/variables.scss';
+.nav-menu-container{
+    width: 100%;
+    height: auto;
+}
+.nav-menu{
+    @include flex(center , center);
+    gap: 24px;
+    & li{
+     
+    }
+}
+
+
