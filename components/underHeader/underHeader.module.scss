@@ -4,10 +4,42 @@
     position: relative;
     width: 100%;
     height: auto;
-    @include flex(center , center)
+    @include flex(center , center);
 }
 .under-header{
+    background-image: url('/Rectangle1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
     height: 600px;
     width: 100%;
-    
+    @include flex(center , center);
+    flex-direction: column;
+}
+.under-header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.407);
+    z-index: 4;
+  }
+.under-header-h2{
+    @include font-style(20px, 400, $natural-color2, "EudoxusSansRegular");
+    text-align: center;
+    margin-bottom: 16px;
+    z-index: 5;
+}
+.under-header-h1{
+    @include font-style(56px, 800, $natural-color2, "EudoxusSansRegular");
+    text-align: center;
+    margin-bottom: 36px;
+    z-index: 5;
+}
+.under-header-buttons-wrapper{
+    @include flex(center , center);
+    gap: 8px;
+    z-index: 5;
 }

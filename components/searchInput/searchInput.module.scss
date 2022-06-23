@@ -8,24 +8,18 @@
   }
   .searchInput {
     border: none;
-    border-bottom: 1px solid $stylique-grey-3;
+    border-bottom: 1px solid $primary-color2;
     width: 480px;
     padding: 6px 44px;
-    border: 1px solid red;
   }
   .searchInput:hover,
   .searchInput:focus,
   .searchInput:active {
     border: none;
     outline: none;
-    border-bottom: 1px solid $stylique-grey-3;
+    border-bottom: 1px solid $primary-color2;
   }
   .searchInput::placeholder {
-    color: $stylique-grey-4;
+    color: $secondary-color1;
   }
 }
-// @media (max-width: 830px) {
-//   .search-input-ui {
-//     display: none;
-//   }
-// }

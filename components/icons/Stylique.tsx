@@ -1,4 +1,4 @@
-const S = ({ className }) => (
+const S = ({ className = ''}) => (
     <svg
       className={className}
       width="15"
@@ -13,7 +13,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const T = ({ className }) => (
+  const T = ({ className = ''}) => (
     <svg
       className={className}
       width="17"
@@ -28,7 +28,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const Y = ({ className }) => (
+  const Y = ({ className = ''}) => (
     <svg
       className={className}
       width="19"
@@ -43,7 +43,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const L = ({ className }) => (
+  const L = ({ className = '' }) => (
     <svg
       className={className}
       width="13"
@@ -58,7 +58,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const I = ({ className }) => (
+  const I = ({ className = ''}) => (
     <svg
       className={className}
       width="5"
@@ -73,7 +73,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const Q = ({className}) => (
+  const Q = ({className = ''}) => (
     <svg
       className={className}
       width="23"
@@ -88,7 +88,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const U = ({ className }) => (
+  const U = ({ className = '' }) => (
     <svg
       className={className}
       width="18"
@@ -103,7 +103,7 @@ const S = ({ className }) => (
       />
     </svg>
   );
-  const E = ({ className }) => (
+  const E = ({ className = ''}) => (
     <svg
       className={className}
       width="15"

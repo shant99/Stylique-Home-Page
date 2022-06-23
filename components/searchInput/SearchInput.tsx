@@ -14,7 +14,6 @@ function SearchInput({className = ''}) {
         className={styles["searchInput"]}
         autoComplete="on"
       />
-      Hello
     </div>
   );
 }

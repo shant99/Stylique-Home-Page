@@ -4,13 +4,18 @@
 .header-container{
     width: 100%;
     height: auto;
-    
+    padding: 22px 0 16px 0;
 }
 .header-slice-1{
-    @include flex( space-around , center)
+    @include flex( space-between , center);
+    margin-bottom: 20px;
+}
+.header-slice-1-icons{
+    @include flex( center , center);
+    gap: 18px;
 }
 .header-slice-2{
-    @include flex( space-around , center)
+    @include flex( space-between , center)
 }
 
 .header{

@@ -1,3 +1,10 @@
+@import '../../styles/scss/mixins.scss';
+@import '../../styles/scss/variables.scss';
+.select-container{
+    @include flex(center , center);
+}
 .select{
-    
+    border: none;
+    background-color: $natural-color2;
+    @include font-style(16px, 400, $primary-color2 , "EudoxusSansRegular");
 }

@@ -3,19 +3,48 @@
 // default
 .button-{
     border: none;
-    background-color: white;
+    background-color: $natural-color2;
     @include flex(center , center);
 }
 
 
 // transparent
 .button-transparent{
-    @include font-style(16px , 400 ,$primary-color2 , 'EudoxusSansLight');
+    @include font-style(16px, 400, $primary-color2 , "EudoxusSansRegular");
     @include flex(center , center);
     border: none;
     background-color: transparent;
-    border: 1px solid transparent
+    border: 1px solid transparent;
+    padding: 5px 0;
 }
 .button-transparent-active{
     border-bottom: 1px solid black;
+}
+
+// transparent-white
+.button-transparent-white{
+    @include font-style(16px, 400, $natural-color2 , "EudoxusSansRegular");
+    @include flex(center , center);
+    border: none;
+    background-color: transparent;
+    border: 1px solid $natural-color2;
+    padding: 16px 10px;
+
+}
+.button-transparent-white-active{
+    // border-bottom: 1px solid white;
+}
+
+// dark
+.button-dark{
+    @include font-style(16px, 400, $natural-color2, "EudoxusSansRegular");
+    @include flex(center , center);
+    border: none;
+    background-color: $primary-color2;
+    border: 1px solid $primary-color2;
+    padding: 16px 10px;
+
+}
+.button-dark-active{
+    // border-bottom: 1px solid white;
 }

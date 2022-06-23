@@ -1,10 +1,14 @@
 import styles from "./header.module.scss";
-import Stylique from "../icons/Stylique.jsx";
+import Stylique from "../icons/Stylique";
+import Heart from "../icons/Heart";
 import { useState } from "react";
 import Head from "next/head";
 import NavMenu from "../navMenu/NavMenu";
 import Select from "../select/Select";
-import Search from "../icons/Search";
+import SearchInput from "../searchInput/SearchInput";
+import User from "../icons/User";
+import Shopping from "../icons/Shopping";
+
 
 const Header: React.FC = () => {
 
@@ -18,7 +22,12 @@ const Header: React.FC = () => {
       <div className={styles["header"]}>
         <div className={styles["header-slice-1"]}>
             <Stylique />
-            <Search />
+            <SearchInput />
+            <div className={styles['header-slice-1-icons']}>
+              <Heart />
+              <User />
+              <Shopping />
+            </div>
         </div>
         <div className={styles["header-slice-2"]}>
           <NavMenu />
