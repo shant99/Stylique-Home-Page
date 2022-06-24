@@ -29,7 +29,6 @@
     background-color: transparent;
     border: 1px solid $natural-color2;
     padding: 16px 10px;
-
 }
 .button-transparent-white-active{
     // border-bottom: 1px solid white;
@@ -46,5 +45,18 @@
 
 }
 .button-dark-active{
+    // border-bottom: 1px solid white;
+}
+
+// transparent-black
+.button-transparent-black{
+    @include font-style(16px, 400, $primary-color2 , "EudoxusSansRegular");
+    @include flex(center , center);
+    border: none;
+    background-color: transparent;
+    border: 1px solid  $primary-color2;
+    padding: 10px 20px;
+}
+.button-transparent-black-active{
     // border-bottom: 1px solid white;
 }

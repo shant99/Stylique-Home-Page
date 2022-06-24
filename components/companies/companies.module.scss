@@ -1,0 +1,35 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.companies-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 96px;
+}
+.companies{
+    @include flex(center , center) ;
+    flex-direction: column;
+}
+.companies-header{
+    @include font-style(32px, 500, $primary-color2, "EudoxusSansRegular");
+    margin-bottom: 44px;
+}
+.companies-list{
+    @include flex(center , center);
+    gap: 35px;
+    overflow-x: scroll;
+    max-width: 100%;
+}
+.companie{
+    width: 200px;
+    height: 200px;
+    background-color: $primary-color5;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.companie:hover{
+    background-color: #fbfafa;
+    transition-duration: 0.3s;
+}

@@ -1,0 +1,21 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.exclusive-product-section-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include flex(center , center);
+    padding: 96px 0;
+}
+.exclusive-product-section{
+    // @include flex(center , center);
+    display: flex;
+    gap: 62px;
+} 
+// .exclusive-product-section div:first-child {
+//     order: 2;
+// }
+.exclusive-product-section{
+    order: 1;
+}
+

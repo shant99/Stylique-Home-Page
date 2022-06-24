@@ -1,0 +1,13 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.exclusive-product{
+    @include flex(center , flex-start);
+    flex-direction: column;
+    gap: 24px;
+}
+.exclusive-product-above-title{
+    @include font-style(20px, 400, $primary-color2, "EudoxusSansLight");
+}
+.exclusive-product-title{
+    @include font-style(32px, 500, $primary-color2, "EudoxusSansLight");
+}

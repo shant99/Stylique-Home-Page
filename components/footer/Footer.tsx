@@ -1,6 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // 22
+import Maestro from "../icons/Maestro";
+import MasterCard from "../icons/MasterCard";
+import Visa from "../icons/Visa";
 import styles from "./footer.module.scss";
+import {v4} from 'uuid'
+
+const arr1 = [
+ 'Produkte' , 'Inspiration' , 'Magazin' , 'Hersteller' ,
+  'Architekten' , 'Händler'
+]
+const arr2 = [
+  'Unsere Mission' , 'Jobs' , 'Events' , 'Für Architekten' , 'Für Hersteller' , 
+  'Für Händler'
+]
+const arr3 = [
+  
+]
 
 function Footer() {
   return (
@@ -10,46 +26,12 @@ function Footer() {
           {/* 1 */}
           <ul>
             <li>Was suchst du?</li>
-            <li>
-              <a href="#">Produkte</a>
-            </li>
-            <li>
-              <a href="#">Inspiration</a>
-            </li>
-            <li>
-              <a href="#">Magazin</a>
-            </li>
-            <li>
-              <a href="#">Hersteller</a>
-            </li>
-            <li>
-              <a href="#">Architekten</a>
-            </li>
-            <li>
-              <a href="#">Händler</a>
-            </li>
+            {arr1.map(item => (<li key={v4()}><a href="#">{item}</a></li>))}
           </ul>
           {/* 2 */}
           <ul>
             <li>Unternehmen</li>
-            <li>
-              <a href="#">Unsere Mission</a>
-            </li>
-            <li>
-              <a href="#">Jobs</a>
-            </li>
-            <li>
-              <a href="#">Events</a>
-            </li>
-            <li>
-              <a href="#">Für Architekten</a>
-            </li>
-            <li>
-              <a href="#">Für Hersteller</a>
-            </li>
-            <li>
-              <a href="#">Für Händler</a>
-            </li>
+            {arr2.map(item => (<li key={v4()}><a href="#">{item}</a></li>))}
           </ul>
           {/* 3 */}
           <ul>
@@ -61,22 +43,22 @@ function Footer() {
               <a href="#">Bezahlmethoden</a>
             </li>
             <li>
-              <span>
-                {/* <Visa width={67} heigth={21} className="footer-visa-icon" /> */}
+            <span>
+                <Visa width={67} heigth={21} className="footer-visa-icon" />
               </span>
               <span>
-                {/* <Maestro
+                <Maestro
                   width={66}
                   heigth={36}
                   className="footer-maestro-icon"
-                /> */}
+                />
               </span>
               <span>
-                {/* <MasterCard
+                <MasterCard
                   width={60}
                   height={40}
                   className="footer-masterCard-icon"
-                /> */}
+                />
               </span>
             </li>
             <br />

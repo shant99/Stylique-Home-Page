@@ -1,0 +1,46 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.card{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.card-img-wrapper{
+    width: 100%;
+    min-height: 340px;
+    position: relative;
+    background-color: gray;
+    margin-bottom: 16px;
+    .card-img{
+
+    }
+}
+.card-folder-plus-wrapper{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.342);
+    @include flex(center , center);
+}
+.card-tags{
+    position: relative;
+    @include flex(flex-start , center);
+    gap: 4px;
+    margin-bottom: 16px;
+    .card-tag{
+        background-color:$primary-color5;
+        padding: 4px 16px;
+    @include font-style(14px, 500, $primary-color2, "EudoxusSansRegular");
+
+    }
+}
+.card-title{
+    width: 80%;
+    margin-bottom: 8px;
+    white-space: normal;
+    @include font-style(16px, 400, $primary-color2, "EudoxusSansRegular");
+}
+.card-price{
+    @include font-style(14px, 300, $primary-color2, "EudoxusSansRegular");
+}

@@ -1,7 +1,8 @@
 @import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
 .footer-container {
   width: 100%;
-  background-color: $stylique-grey-7;
+  background-color: $secondary-color4;
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
