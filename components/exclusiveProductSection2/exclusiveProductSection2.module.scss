@@ -1,17 +1,17 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
-.exclusive-product-section-container{
+.exclusive-product-section2-container{
     position: relative;
     width: 100%;
     height: auto;
     @include flex(flex-start , center);
     padding: 96px 0;
 }
-.exclusive-product-section{
+.exclusive-product-section2{
+    // @include flex(center , center);
     display: flex;
     gap: 62px;
 } 
-
 .exclusive-product{
     @include flex(center , flex-start);
     flex-direction: column;
@@ -25,11 +25,11 @@
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px){
-    .exclusive-product-section-container{
+    .exclusive-product-section2-container{
         padding: 60px 0;    
     }
-    .exclusive-product-section{
-        flex-direction: column-reverse;
+    .exclusive-product-section2{
+        flex-direction: column;
         gap: 15px;
     } 
     .exclusive-product-image{
@@ -42,4 +42,7 @@
 @media screen and (max-width: 768px) {
 
 }
+
+
+
 

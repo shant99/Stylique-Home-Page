@@ -7,6 +7,7 @@
 .nav-menu{
     @include flex(flex-start , center);
     gap: 24px;
+    flex-wrap: wrap;
     & li{
    
     }

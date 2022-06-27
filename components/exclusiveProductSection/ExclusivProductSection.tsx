@@ -1,25 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 import Button from "../button/Button";
-import ExclusiveProduct from "../exclusiveProduct/ExclusiveProduct";
 import styles from "./exclusiveProductSection.module.scss";
 
 const ExclusiveProductSection = ({
   imageUrl = "",
   buttonName = "",
-  productTitle = "",
-  reverse = false,
+  productTitle = ""
 }) => {
   return (
     <section className={styles["exclusive-product-section-container"]}>
       <div className={styles["exclusive-product-section"]}>
-        <ExclusiveProduct buttonName={buttonName} title={productTitle} 
-        style={{ order: 2 }}
-        />
+      <div className={styles["exclusive-product"]}>
+          <h4 className={styles["exclusive-product-above-title"]}>
+            Exklusive ausgewählte Hersteller
+          </h4>
+          <h2 className={styles["exclusive-product-title"]}>{productTitle}</h2>
+          <Button type='dark' name={buttonName} />
+        </div>
         <div
           className={styles["exclusive-product-image-wrapper"]}
-          style={{ order: 1 }}
         >
-          <img src={imageUrl} alt="image" />
+          <img src={imageUrl} alt="image"
+            className={styles["exclusive-product-image"]}
+          />
         </div>
       </div>
     </section>

@@ -2,13 +2,14 @@
 import FolderPlus from '../icons/FolderPlus';
 import styles from './card.module.scss';
 import { v4 } from "uuid";
+import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
 const Card = ({
     title = "card title",
     cardPrice = "card price",
     tags = ["card tag"],
     imageUrl = ''
-  }) => {
+  }: any) => {
     return (
       <div className={styles["card"]}>
         <div className={styles["card-img-wrapper"]}>
@@ -21,7 +22,7 @@ const Card = ({
            />
         </div>
         <div className={styles["card-tags"]}>
-          {tags.map((item) => (
+          {tags.map((item: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined) => (
             <div key={v4()} className={styles["card-tag"]}>
               {item}
             </div>

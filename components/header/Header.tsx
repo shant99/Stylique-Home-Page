@@ -24,9 +24,9 @@ const Header: React.FC = () => {
             <Stylique />
             <SearchInput />
             <div className={styles['header-slice-1-icons']}>
-              <Heart />
-              <User />
-              <Shopping />
+              <Heart cursor='pointer' />
+              <User cursor='pointer'/>
+              <Shopping cursor='pointer' />
             </div>
         </div>
         <div className={styles["header-slice-2"]}>

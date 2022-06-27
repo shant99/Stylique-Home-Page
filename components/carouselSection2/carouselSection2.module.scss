@@ -1,0 +1,23 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+
+.carousel-section2-container{
+    margin-bottom: 90px;
+}
+
+.carousel-section2-title{
+    @include font-style(32px, 400, $primary-color2, "EudoxusSansRegular");
+    margin-bottom: 44px;
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .carousel-section2-container{
+        margin-bottom: 60px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  
+}
+@media screen and (max-width: 768px) {
+
+}

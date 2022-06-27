@@ -1,0 +1,54 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.mail-section-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 176px;
+}
+.mail-section{
+    @include flex(flex-start , center);
+    gap: 98px;
+}
+.mail-section-img-wrapper{
+    background-image: url('/Rectangle4.png');
+    width: 800px;
+    height: 361px;
+    position: relative;
+    padding: 48px;
+    @include flex(flex-end , flex-start);
+    flex-direction: column;
+}
+.mail-section-img-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.407);
+    z-index: 4;
+  }
+.mail-section-under-title{
+    @include font-style(14px, 700, white ,"EudoxusSansLight");
+    margin-bottom: 16px;
+    z-index: 5;
+}
+.mail-section-title{
+    @include font-style(32px, 500, white ,"EudoxusSansLight");
+    z-index: 5;
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .mail-section{
+        @include flex(center , flex-start);
+       flex-direction: column;
+        gap: 60px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  
+}
+@media screen and (max-width: 768px) {
+
+}

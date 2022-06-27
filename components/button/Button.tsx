@@ -2,7 +2,7 @@ import styles from './button.module.scss';
 
 function Button({
     name = 'button' ,
-     type = '' || 'transparent' , 
+     type = '' , 
      active = false , 
      click = undefined}: any){
     const buttonActive = active ? styles[`button-${type}-active`]: styles['']
