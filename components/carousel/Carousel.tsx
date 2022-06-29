@@ -52,7 +52,7 @@ function Carousel({
   };
   return (
     <Slider {...settings} className={styles["carousel"]}>
-      {arr.map((item) => {
+      {arr.map((item:any) => {
         return (
  
             <Card
