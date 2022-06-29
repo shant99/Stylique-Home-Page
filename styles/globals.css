@@ -39,7 +39,5 @@ body{
 
 
 @media (max-width: 920px){
-	body.lock{
-		/* overflow: hidden; */
-	}
+
 }
