@@ -17,11 +17,11 @@ export const getStaticProps = async () => {
   const response = await fetch('http://localhost:3000/api/products');
   const data = await response.json();
 
-  // if(!data){
-  //   return {
-  //     notFound: true
-  //   }
-  // }
+  if(!data){
+    return {
+      notFound: true
+    }
+  }
   return {
     props: {
       products: data
@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const Home: NextPage = ({products = []}: any) => {
+const Home: NextPage = ({products }: any) => {
 
   return (
     <div className={styles['home-page-container']}>
