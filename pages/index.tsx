@@ -39,9 +39,9 @@ const Home: NextPage = ({products}: any) => {
         products={products}
           title='Lieblings STYLES der Redaktion'
         />
-        <Companies />
+        {/* <Companies />
         <MailSection />
-        <Footer />
+        <Footer /> */}
     </div>
   )
 }
