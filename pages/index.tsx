@@ -26,7 +26,7 @@ const Home: NextPage = ({products = []}: any) => {
           buttonName="Jetzt als Hersteller bewerben"
           productTitle="Hohe Produktqualität durch sorgfältige Auswahl von Herstellern & Produkten"
         />
-        {/* <CarouselSection 
+        <CarouselSection 
           products={products}
           title='Neue Produkte & Kollektionen'
         />
@@ -38,28 +38,28 @@ const Home: NextPage = ({products = []}: any) => {
         <CarouselSection2 
         products={products}
           title='Lieblings STYLES der Redaktion'
-        /> */}
-        {/* <Companies />
+        />
+        <Companies />
         <MailSection />
-        <Footer /> */}
+        <Footer />
     </div>
   )
 }
 
-// export const getStaticProps = async () => {
-//   const response = await fetch('http://localhost:3000/api/products');
-//   const data = await response.json();
+export const getStaticProps = async () => {
+  const response = await fetch('http://localhost:3000/api/products');
+  const data = await response.json();
 
-//   if(!data){
-//     return {
-//       notFound: true
-//     }
-//   }
-//   return {
-//     props: {
-//       products: data
-//     }
-//   }
-// }
+  if(!data){
+    return {
+      notFound: true
+    }
+  }
+  return {
+    props: {
+      products: data
+    }
+  }
+}
 
 export default Home
