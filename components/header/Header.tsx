@@ -10,7 +10,7 @@ import User from "../icons/User";
 import Shopping from "../icons/Shopping";
 import Search from "../icons/Search";
 import sameStyles from '../../styles/same.module.css';
-import { Divider } from "antd";
+
 
 const Header: React.FC = () => {
   const [hamburger, setHamburger] = useState(false);

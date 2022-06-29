@@ -1,4 +1,4 @@
-import Card from "../card/Card";
+
 import Carousel from "../carousel/Carousel";
 import styles from "./carouselSection2.module.scss";
 import sameStyles from "../../styles/same.module.css";
