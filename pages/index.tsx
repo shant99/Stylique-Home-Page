@@ -12,38 +12,44 @@ import ProductsSection from '../components/productsSection/ProductsSection'
 import UnderHeader from '../components/underHeader/UnderHeader'
 import styles from '../styles/Home.module.css';
 import 'antd/dist/antd.css';
+import { useEffect, useState } from 'react'
 
-export const getStaticProps = async () => {
-  const response = await fetch('http://localhost:3000/api/products');
-  const data = await response.json();
+// export const getStaticProps = async () => {
+//   const response = await fetch('http://localhost:3000/api/products');
+//   const data = await response.json();
 
-  if(!data){
-    return {
-      notFound: true
-    }
-  }
-  return {
-    props: {
-      products: data
-    }
-  }
-}
+//   if(!data){
+//     return {
+//       notFound: true
+//     }
+//   }
+//   return {
+//     props: {
+//       products: data
+//     }
+//   }
+// }
 
-const Home: NextPage = ({products }: any) => {
+const Home: NextPage = ({products  =[] }: any) => {
+  const [prod , setProd] = useState([])
 
+  useEffect( ()=> {
+     fetch('http://localhost:3000/api/products').then(res => res.json()).then(data => setProd(data))
+
+  },[])
   return (
     <div className={styles['home-page-container']}>
         <AboveHeader />
         <Header />
         <UnderHeader />
-        <ProductsSection products={products}/>
+        <ProductsSection products={prod}/>
         <ExclusiveProductSection 
           imageUrl="/Rectangle3.png"
           buttonName="Jetzt als Hersteller bewerben"
           productTitle="Hohe Produktqualität durch sorgfältige Auswahl von Herstellern & Produkten"
         />
         <CarouselSection 
-          products={products}
+          products={prod}
           title='Neue Produkte & Kollektionen'
         />
         <ExclusiveProductSection2 
@@ -52,7 +58,7 @@ const Home: NextPage = ({products }: any) => {
         productTitle='Showrooms & Händler für Produkte in Deiner Nähe'
         />
         <CarouselSection2 
-        products={products}
+        products={prod}
           title='Lieblings STYLES der Redaktion'
         />
         <Companies />
