@@ -13,6 +13,22 @@ import UnderHeader from '../components/underHeader/UnderHeader'
 import styles from '../styles/Home.module.css';
 import 'antd/dist/antd.css';
 
+export const getStaticProps = async () => {
+  const response = await fetch('http://localhost:3000/api/products');
+  const data = await response.json();
+
+  // if(!data){
+  //   return {
+  //     notFound: true
+  //   }
+  // }
+  return {
+    props: {
+      products: data
+    }
+  }
+}
+
 const Home: NextPage = ({products = []}: any) => {
 
   return (
@@ -46,20 +62,6 @@ const Home: NextPage = ({products = []}: any) => {
   )
 }
 
-// export const getStaticProps = async () => {
-//   const response = await fetch('http://localhost:3000/api/products');
-//   const data = await response.json();
 
-//   if(!data){
-//     return {
-//       notFound: true
-//     }
-//   }
-//   return {
-//     props: {
-//       products: data
-//     }
-//   }
-// }
 
 export default Home
