@@ -46,20 +46,20 @@ const Home: NextPage = ({products = []}: any) => {
   )
 }
 
-export const getStaticProps = async () => {
-  const response = await fetch('http://localhost:3000/api/products');
-  const data = await response.json();
+// export const getStaticProps = async () => {
+//   const response = await fetch('http://localhost:3000/api/products');
+//   const data = await response.json();
 
-  if(!data){
-    return {
-      notFound: true
-    }
-  }
-  return {
-    props: {
-      products: data
-    }
-  }
-}
+//   if(!data){
+//     return {
+//       notFound: true
+//     }
+//   }
+//   return {
+//     props: {
+//       products: data
+//     }
+//   }
+// }
 
 export default Home
