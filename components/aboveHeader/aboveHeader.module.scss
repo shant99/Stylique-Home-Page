@@ -2,10 +2,10 @@
 @import "../../styles/scss/mixins.scss";
 
 .above-header-container {
-  width: 100%;
   background-color: $primary-color5;
   @include flex(center, center);
   padding: 6px 6px;
+  width: 100%;
   .above-header {
     @include font-style(12px, 500, $primary-color3, "EudoxusSansLight");
     & span {

@@ -1,20 +1,17 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
-.under-header-container{
-    position: relative;
-    width: 100%;
-    height: auto;
-    @include flex(center , center);
-}
+
 .under-header{
     background-image: url('/Rectangle1.png');
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: gray;
     height: 600px;
     width: 100%;
     @include flex(center , center);
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 .under-header::after{
     content: "";

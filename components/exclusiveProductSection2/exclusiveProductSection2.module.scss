@@ -1,48 +1,39 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
-.exclusive-product-section2-container{
-    position: relative;
-    width: 100%;
-    height: auto;
-    @include flex(flex-start , center);
-    padding: 96px 0;
+.exclusive-product {
+  padding: 96px 0;
 }
-.exclusive-product-section2{
-    // @include flex(center , center);
-    display: flex;
-    gap: 62px;
-} 
-.exclusive-product{
-    @include flex(center , flex-start);
-    flex-direction: column;
-    gap: 24px;
+.exclusive-product-info {
+  padding: 0 62px;
 }
-.exclusive-product-above-title{
-    @include font-style(20px, 400, $primary-color2, "EudoxusSansLight");
+.exclusive-product-above-title {
+  @include font-style(20px, 400, $primary-color2, "EudoxusSansLight");
+//   margin-bottom: 24px !important;
 }
-.exclusive-product-title{
-    @include font-style(32px, 500, $primary-color2, "EudoxusSansLight");
+.exclusive-product-title {
+  @include font-style(32px, 500, $primary-color2, "EudoxusSansRegular");
+  line-height: 40px;
+  margin-bottom: 24px !important;
+}
+.exclusive-product-image-wrapper {
+  width: 776px;
+  height: 450px;
+  @include flex(flex-end, center);
 }
 
-@media screen and (min-width: 993px) and (max-width: 1200px){
-    .exclusive-product-section2-container{
-        padding: 60px 0;    
-    }
-    .exclusive-product-section2{
-        flex-direction: column;
-        gap: 15px;
-    } 
-    .exclusive-product-image{
-        width: 100%;
-    }
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .exclusive-product-section-container {
+    padding: 60px 0;
+  }
+  .exclusive-product-section {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .exclusive-product-image {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  
 }
 @media screen and (max-width: 768px) {
-
 }
-
-
-
-

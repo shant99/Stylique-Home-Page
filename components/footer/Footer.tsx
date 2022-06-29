@@ -4,35 +4,55 @@ import Maestro from "../icons/Maestro";
 import MasterCard from "../icons/MasterCard";
 import Visa from "../icons/Visa";
 import styles from "./footer.module.scss";
-import {v4} from 'uuid'
+import { v4 } from "uuid";
+import sameStyles from "../../styles/same.module.css";
+import { Col, Row } from "antd";
 
 const arr1 = [
- 'Produkte' , 'Inspiration' , 'Magazin' , 'Hersteller' ,
-  'Architekten' , 'Händler'
-]
+  "Produkte",
+  "Inspiration",
+  "Magazin",
+  "Hersteller",
+  "Architekten",
+  "Händler",
+];
 const arr2 = [
-  'Unsere Mission' , 'Jobs' , 'Events' , 'Für Architekten' , 'Für Hersteller' , 
-  'Für Händler'
-]
-const arr3 = [
-  
-]
+  "Unsere Mission",
+  "Jobs",
+  "Events",
+  "Für Architekten",
+  "Für Hersteller",
+  "Für Händler",
+];
+const arr3 = [];
 
 function Footer() {
   return (
     <>
-      <div className={styles["footer-container"]}>
-        <div className={styles["footer"]}>
+      <div className={sameStyles["container"]}>
+        <Row className={styles["footer"]}>
           {/* 1 */}
-          <ul>
-            <li>Was suchst du?</li>
-            {arr1.map(item => (<li key={v4()}><a href="#">{item}</a></li>))}
-          </ul>
+          <Col lg={{ span: 6 }} xl={{ span: 6 }}>
+            <ul>
+              <li>Was suchst du?</li>
+              {arr1.map((item) => (
+                <li key={v4()}>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </Col>
           {/* 2 */}
-          <ul>
-            <li>Unternehmen</li>
-            {arr2.map(item => (<li key={v4()}><a href="#">{item}</a></li>))}
-          </ul>
+          <Col lg={{ span: 6 }} xl={{ span: 6 }}>
+            <ul>
+              <li>Unternehmen</li>
+              {arr2.map((item) => (
+                <li key={v4()}>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </Col>
           {/* 3 */}
           <ul>
             <li>Sicher einkaufen</li>
@@ -43,7 +63,7 @@ function Footer() {
               <a href="#">Bezahlmethoden</a>
             </li>
             <li>
-            <span>
+              <span>
                 <Visa width={67} heigth={21} className="footer-visa-icon" />
               </span>
               <span>
@@ -92,10 +112,10 @@ function Footer() {
             </li>
             <br />
             <li>
-              <a href="#">Mo-Sa von 9:00  20:00</a>
+              <a href="#">Mo-Sa von 9:00 20:00</a>
             </li>
           </ul>
-        </div>
+        </Row>
       </div>
     </>
   );

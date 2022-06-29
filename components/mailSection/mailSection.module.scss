@@ -1,14 +1,7 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
-.mail-section-container{
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 176px;
-}
 .mail-section{
-    @include flex(flex-start , center);
-    gap: 98px;
+    margin-bottom: 96px;
 }
 .mail-section-img-wrapper{
     background-image: url('/Rectangle4.png');
@@ -18,6 +11,8 @@
     padding: 48px;
     @include flex(flex-end , flex-start);
     flex-direction: column;
+    overflow: hidden;
+    object-fit: cover;
 }
 .mail-section-img-wrapper::after{
     content: "";
@@ -38,13 +33,40 @@
     @include font-style(32px, 500, white ,"EudoxusSansLight");
     z-index: 5;
 }
+.mail-form{
+    max-width: 400px;
+    padding-left: 50px
+}
+.mail-form-title{
+    @include font-style(32px, 400, $primary-color2 ,"EudoxusSansLight");
+    margin-bottom: 3px;
+}
+.mail-form-under-title{
+    @include font-style(14px, 400, $primary-color2 ,"EudoxusSansLight");
+    margin-bottom:  24px;
+}
+.mail-form-input-title{
+    @include font-style(14px, 400, $primary-color2 ,"EudoxusSansLight");
+    margin-bottom:  8px;
+}
+.input-mail-wrapper{
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+.input-mail{
+    height: 40px;
+    width: 100%;
+    border: 1px solid $primary-color4;
+}
+.input-mail-line-icon-wrapper{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 @media screen and (min-width: 993px) and (max-width: 1200px){
-    .mail-section{
-        @include flex(center , flex-start);
-       flex-direction: column;
-        gap: 60px;
-    }
+
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
   

@@ -1,29 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
+import { Col, Row } from "antd";
 import Button from "../button/Button";
 import styles from "./exclusiveProductSection.module.scss";
+import sameStyles from "../../styles/same.module.css";
+import { Typography } from 'antd';
+//exclusive-product-container
 
 const ExclusiveProductSection = ({
   imageUrl = "",
   buttonName = "",
-  productTitle = ""
+  productTitle = "",
 }) => {
+
+  const { Title } = Typography;
   return (
-    <section className={styles["exclusive-product-section-container"]}>
-      <div className={styles["exclusive-product-section"]}>
-      <div className={styles["exclusive-product"]}>
-          <h4 className={styles["exclusive-product-above-title"]}>
-            Exklusive ausgewählte Hersteller
-          </h4>
-          <h2 className={styles["exclusive-product-title"]}>{productTitle}</h2>
-          <Button type='dark' name={buttonName} />
-        </div>
-        <div
-          className={styles["exclusive-product-image-wrapper"]}
-        >
-          <img src={imageUrl} alt="image"
-            className={styles["exclusive-product-image"]}
-          />
-        </div>
+    <section>
+      <div className={sameStyles["container"]}>
+        <Row  className={styles["exclusive-product"]} align={"middle"}>
+          <Col
+            lg={{ span: 11 }}
+            xl={{ span: 10 }}
+            className={styles["exclusive-product-info"]}
+          >
+            <Title level={4} className={styles["exclusive-product-above-title"]}>
+              Exklusive ausgewählte Hersteller
+            </Title>
+            <Title level={2} className={styles["exclusive-product-title"]}>
+              {productTitle}
+            </Title>
+            <Button type="dark" name={buttonName} />
+          </Col>
+          <Col lg={{ span: 13 }} xl={{ span: 14 }} className={styles["exclusive-product-image-wrapper"]}>
+              <img
+                src={imageUrl}
+                alt="image"
+                className={styles["exclusive-product-image"]}
+              />
+          </Col>
+        </Row>
       </div>
     </section>
   );

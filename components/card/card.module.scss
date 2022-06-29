@@ -2,17 +2,26 @@
 @import "../../styles/scss/mixins.scss";
 .card{
     position: relative;
-    display: inline-block;
-    width: 100%;
+    cursor: pointer;
+}
+.card:hover{
+    .card-img:hover{
+        transform: scale(1.2);
+    }
 }
 .card-img-wrapper{
-    width: 100%;
-    min-height: 340px;
+    width: 330px;
+    height: 340px;
     position: relative;
     background-color: gray;
     margin-bottom: 16px;
+    overflow: hidden;
+    cursor: pointer;
     .card-img{
-
+        transition: 0.3s ease 0s;
+    }
+    .card-img:hover{
+        transform: scale(1.2);
     }
 }
 .card-folder-plus-wrapper{
@@ -22,12 +31,18 @@
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.342);
     @include flex(center , center);
+    cursor: pointer;
+}
+.card-folder-plus-wrapper:hover{
+    background-color: rgba(255, 255, 255, 0.545);
 }
 .card-tags{
     position: relative;
     @include flex(flex-start , center);
     gap: 4px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
+    cursor: default;
     .card-tag{
         background-color:$primary-color5;
         padding: 4px 16px;
@@ -43,4 +58,11 @@
 }
 .card-price{
     @include font-style(14px, 300, $primary-color2, "EudoxusSansRegular");
+    @include flex(space-between , center);
+}
+.card-price-slice2{
+    color: transparent;
+}
+.card-price-slice2:hover{
+    color: $primary-color2;
 }

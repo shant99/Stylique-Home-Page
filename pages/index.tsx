@@ -10,7 +10,8 @@ import Header from '../components/header/Header'
 import MailSection from '../components/mailSection/MailSection'
 import ProductsSection from '../components/productsSection/ProductsSection'
 import UnderHeader from '../components/underHeader/UnderHeader'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import 'antd/dist/antd.css';
 
 const Home: NextPage = ({products}: any) => {
 
@@ -48,7 +49,7 @@ const Home: NextPage = ({products}: any) => {
 export const getStaticProps = async () => {
   const response = await fetch('http://localhost:3000/api/products');
   const data = await response.json();
-  console.log(data)
+
   if(!data){
     return {
       notFound: true

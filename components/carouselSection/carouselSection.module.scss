@@ -1,9 +1,7 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
 
-.carousel-section-container{
-    margin-bottom: 94px;
-}
+
 
 .carousel-section-title{
     @include font-style(32px, 400, $primary-color2, "EudoxusSansRegular");

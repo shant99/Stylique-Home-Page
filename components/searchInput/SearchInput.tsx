@@ -5,7 +5,7 @@ function SearchInput({className = ''}) {
   return (
     <div className={styles[`search-input-ui`] + ' ' + styles[className]}>
       <span className={styles["search-input-icon"]}>
-        <Search width="17" height="17" />
+        <Search width="20" height="20" />
       </span>
       <input
         id="before"

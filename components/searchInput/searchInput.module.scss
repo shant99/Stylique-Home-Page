@@ -1,6 +1,8 @@
 @import '../../styles/scss/variables.scss';
 .search-input-ui {
   position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
   & .search-input-icon {
     position: absolute;
     top: 5px;
@@ -22,4 +24,24 @@
   .searchInput::placeholder {
     color: $secondary-color1;
   }
+}
+
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+  .search-input-ui {
+    .searchInput {
+      width: 300px;
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .search-input-ui {
+    .searchInput {
+      width: 280px;
+    }
+  }
+
+}
+@media screen and (max-width: 768px) {
+
 }

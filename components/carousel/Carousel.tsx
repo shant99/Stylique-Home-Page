@@ -12,8 +12,7 @@ function Carousel({
   imgClickHandler = undefined,
   slidesToShow = 4,
   dots = true,
-  slidesToScroll = 1,
-  responsive = {} ,
+  slidesToScroll = 1
 }) {
 //   const { breakpoint1 } = responsive;
   const settings = {
@@ -31,15 +30,24 @@ function Carousel({
     pauseOnHover: true,
     swipeToSlide: true,
     responsive: [
-    //   {
-    //     breakpoint: breakpoint1.breakpoint,
-    //     settings: {
-    //       slidesToShow: breakpoint1.slidesToShow,
-    //       slidesToScroll: breakpoint1.slidesToScroll,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
     ],
   };
   return (

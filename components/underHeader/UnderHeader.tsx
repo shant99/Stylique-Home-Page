@@ -1,9 +1,10 @@
 import Button from '../button/Button';
 import styles from './underHeader.module.scss';
+import sameStyles from '../../styles/same.module.css';
 
 const UnderHeader = () => {
     return (
-        <section className={styles['under-header-container']}>
+        <section className={sameStyles['container']}>
             <div className={styles['under-header']}>
                 <h3 className={styles['under-header-h2']}>Kuratierte & hochwertige Design-Produkte</h3>
                 <h1 className={styles['under-header-h1']}>Kaufe ein für Deine Interior-<br /> (Bau)- Projekte</h1>

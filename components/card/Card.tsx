@@ -29,7 +29,8 @@ const Card = ({
           ))}
         </div>
         <div className={styles["card-title"]}>{title}</div>
-        <div className={styles["card-price"]}>{cardPrice}</div>
+        <div className={styles["card-price"]}><span>{cardPrice}</span>
+         <span className={styles["card-price-slice2"]}>Jetzt kaufen</span></div>
       </div>
     );
   };

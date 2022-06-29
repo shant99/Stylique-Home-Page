@@ -33,6 +33,9 @@
     border: 1px solid $natural-color2;
     padding: 16px 10px;
 }
+.button-transparent-white:hover{
+    background-color: rgba(255, 255, 255, 0.145);
+}
 .button-transparent-white-active{
     // border-bottom: 1px solid white;
 }
@@ -47,6 +50,9 @@
     padding: 16px 10px;
 
 }
+.button-dark:hover{
+    background-color: #2e2c2c;
+}
 .button-dark-active{
     // border-bottom: 1px solid white;
 }
@@ -59,6 +65,9 @@
     background-color: transparent;
     border: 1px solid  $primary-color2;
     padding: 10px 20px;
+}
+.button-transparent-black:hover{
+    background-color: rgba(230, 224, 224, 0.488);
 }
 .button-transparent-black-active{
     // border-bottom: 1px solid white;
@@ -74,6 +83,26 @@
     width: 100%;
     padding: 10px 0;
 }
+.button-long-dark:hover{
+    background-color: #2e2c2c;
+}
 .button-long-dark-active{
     // border-bottom: 1px solid white;
+}
+
+
+// transparent-bold 
+.button-transparent-bold {
+    @include font-style(20px, 400, $primary-color2 , "EudoxusSansMedium");
+    @include flex(center , center);
+    border: none;
+    background-color: transparent;
+    border: 1px solid  transparent;
+    padding: 10px 0;
+}
+.button-transparent-bold:hover{
+    border-bottom: 1px solid #2e2c2c;
+}
+.button-transparent-bold-active{
+    border-bottom: 1px solid #2e2c2c;
 }
