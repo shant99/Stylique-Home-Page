@@ -14,7 +14,7 @@ import styles from '../styles/Home.module.css';
 import 'antd/dist/antd.css';
 
 export const getStaticProps = async () => {
-  const response = await fetch('http://localhost:3000/api/products');
+  const response = await fetch('/api/products');
   const data = await response.json();
 
   if(!data){
