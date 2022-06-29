@@ -63,7 +63,6 @@ const Header: React.FC = () => {
             <Select />
           </div>
         </div>
-        {/* <Divider /> */}
       </div>
     </div>
   );
