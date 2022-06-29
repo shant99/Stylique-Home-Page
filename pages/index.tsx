@@ -26,7 +26,7 @@ const Home: NextPage = ({products}: any) => {
           buttonName="Jetzt als Hersteller bewerben"
           productTitle="Hohe Produktqualität durch sorgfältige Auswahl von Herstellern & Produkten"
         />
-        <CarouselSection 
+        {/* <CarouselSection 
           products={products}
           title='Neue Produkte & Kollektionen'
         />
@@ -38,7 +38,7 @@ const Home: NextPage = ({products}: any) => {
         <CarouselSection2 
         products={products}
           title='Lieblings STYLES der Redaktion'
-        />
+        /> */}
         {/* <Companies />
         <MailSection />
         <Footer /> */}
