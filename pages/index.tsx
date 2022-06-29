@@ -17,7 +17,7 @@ const Home: NextPage = ({products}: any) => {
 
   return (
     <div className={styles['home-page-container']}>
-        <AboveHeader />
+        {/* <AboveHeader />
         <Header />
         <UnderHeader />
         <ProductsSection products={products}/>
@@ -25,7 +25,7 @@ const Home: NextPage = ({products}: any) => {
           imageUrl="/Rectangle3.png"
           buttonName="Jetzt als Hersteller bewerben"
           productTitle="Hohe Produktqualität durch sorgfältige Auswahl von Herstellern & Produkten"
-        />
+        /> */}
         {/* <CarouselSection 
           products={products}
           title='Neue Produkte & Kollektionen'
