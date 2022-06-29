@@ -36,7 +36,7 @@ const Home: NextPage = ({products  =[] }: any) => {
   useEffect( ()=> {
      fetch('http://localhost:3000/api/products').then(res => res.json()).then(data => setProd(data))
 
-  },[])
+  })
   return (
     <div className={styles['home-page-container']}>
         <AboveHeader />
