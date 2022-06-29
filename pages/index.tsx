@@ -14,7 +14,7 @@ import styles from '../styles/Home.module.css';
 import 'antd/dist/antd.css';
 
 export const getStaticProps = async () => {
-  const response = await fetch('/api/products');
+  const response = await fetch('https://vercel.com/shant99/stylique-home-page/api/products');
   const data = await response.json();
 
   if(!data){
