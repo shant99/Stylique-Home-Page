@@ -1,20 +1,21 @@
-import type { NextPage } from 'next'
-import AboveHeader from '../components/aboveHeader/AboveHeader'
-import CarouselSection from '../components/carouselSection/CarouselSection'
-import CarouselSection2 from '../components/carouselSection2/CarouselSection2'
-import Companies from '../components/companies/Companies'
-import ExclusiveProductSection from '../components/exclusiveProductSection/ExclusivProductSection'
-import ExclusiveProductSection2 from '../components/exclusiveProductSection2/ExclusiveProductSection2'
-import Footer from '../components/footer/Footer'
-import Header from '../components/header/Header'
-import MailSection from '../components/mailSection/MailSection'
-import ProductsSection from '../components/productsSection/ProductsSection'
-import UnderHeader from '../components/underHeader/UnderHeader'
-import styles from '../styles/Home.module.css';
-import 'antd/dist/antd.css';
+import type { NextPage } from "next";
+import AboveHeader from "../components/aboveHeader/AboveHeader";
+import CarouselSection from "../components/carouselSection/CarouselSection";
+import CarouselSection2 from "../components/carouselSection2/CarouselSection2";
+import Companies from "../components/companies/Companies";
+import ExclusiveProductSection from "../components/exclusiveProductSection/ExclusivProductSection";
+import ExclusiveProductSection2 from "../components/exclusiveProductSection2/ExclusiveProductSection2";
+import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
+import MailSection from "../components/mailSection/MailSection";
+import ProductsSection from "../components/productsSection/ProductsSection";
+import UnderHeader from "../components/underHeader/UnderHeader";
+import styles from "../styles/Home.module.css";
+import "antd/dist/antd.css";
+import { useEffect, useState } from "react";
 
 // export const getStaticProps = async () => {
-//   const response = await fetch('https://vercel.com/shant99/stylique-home-page/api/products');
+//   const response = await fetch('http://localhost:3000/api/products');
 //   const data = await response.json();
 
 //   if(!data){
@@ -29,39 +30,48 @@ import 'antd/dist/antd.css';
 //   }
 // }
 
-const Home: NextPage = ({products  =[] }:any) => {
+const Home: NextPage = () => {
+  const [products , setProducts ] = useState([])
+  const fetchProducts = async () => {
+    const response = await fetch("/api/products");
+    const data = await response.json();
+    setProducts(data)
+    return data;
+  };
 
+  useEffect(()=>{
+    fetchProducts()
+
+  } ,[])
   return (
-    <div className={styles['home-page-container']}>
-        <AboveHeader />
-        <Header />
-        <UnderHeader />
-        <ProductsSection products={products}/>
-        <ExclusiveProductSection 
-          imageUrl="/Rectangle3.png"
-          buttonName="Jetzt als Hersteller bewerben"
-          productTitle="Hohe Produktqualität durch sorgfältige Auswahl von Herstellern & Produkten"
-        />
-        <CarouselSection 
-          products={products}
-          title='Neue Produkte & Kollektionen'
-        />
-        <ExclusiveProductSection2 
-        imageUrl="/Rectangle10.png"
-        buttonName='Jetzt mit Showroom bewerben'
-        productTitle='Showrooms & Händler für Produkte in Deiner Nähe'
-        />
-        <CarouselSection2 
+    <div className={styles["home-page-container"]}>
+      <AboveHeader />
+      <Header />
+      <UnderHeader />
+      <ProductsSection products={products} />
+      <ExclusiveProductSection
+        imageUrl="/Rectangle3.png"
+        buttonName="Jetzt als Hersteller bewerben"
+        productTitle="Hohe Produktqualität durch sorgfältige Auswahl von Herstellern & Produkten"
+      />
+      <CarouselSection
         products={products}
-          title='Lieblings STYLES der Redaktion'
-        />
-        <Companies />
-        <MailSection />
-        <Footer />
+        title="Neue Produkte & Kollektionen"
+      />
+      <ExclusiveProductSection2
+        imageUrl="/Rectangle10.png"
+        buttonName="Jetzt mit Showroom bewerben"
+        productTitle="Showrooms & Händler für Produkte in Deiner Nähe"
+      />
+      <CarouselSection2
+        products={products}
+        title="Lieblings STYLES der Redaktion"
+      />
+      <Companies />
+      <MailSection />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-
-
-export default Home
+export default Home;

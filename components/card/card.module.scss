@@ -5,8 +5,11 @@
     cursor: pointer;
 }
 .card:hover{
-    .card-img:hover{
+    .card-img{
         transform: scale(1.2);
+    }
+    .card-price-slice2{
+        color: $primary-color2;
     }
 }
 .card-img-wrapper{
@@ -62,7 +65,4 @@
 }
 .card-price-slice2{
     color: transparent;
-}
-.card-price-slice2:hover{
-    color: $primary-color2;
 }

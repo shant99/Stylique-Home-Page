@@ -4,7 +4,7 @@ import styles from "./carouselSection2.module.scss";
 import sameStyles from "../../styles/same.module.css";
 import { Col, Row } from "antd";
 
-const CarouselSection2 = ({ title = "carousel title", products = [] }) => {
+const CarouselSection2 = ({ title = "carousel title", products = [] }:any) => {
   return (
     <section>
       <div className={sameStyles["container"]}>

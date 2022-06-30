@@ -10,7 +10,7 @@ const ExclusiveProductSection2 = ({
   imageUrl = "",
   buttonName = "",
   productTitle = "",
-}) => {
+}:any) => {
 
   const { Title } = Typography;
   return (
