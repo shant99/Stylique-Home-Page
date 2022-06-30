@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { v4 } from "uuid";
 import Card from "../card/Card";
 import { useRef } from "react";
-import ArrowLeft from "../icons/ArrowLeft";
+import ArrowLeft from "../icons/ArrowLef";
 import ArrowRight from "../icons/ArrowRight";
 
 function Carousel({
