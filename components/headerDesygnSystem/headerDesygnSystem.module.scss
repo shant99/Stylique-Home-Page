@@ -1,0 +1,20 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+.header-desygn-system{
+    padding: 12px 40px;
+    @include flex(space-between , center);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.col1{
+    display: flex;
+    @include font-style(22px, 500, $primary-color2, "EudoxusSansRegular");
+    @include flex(flex-start , center);
+    gap: 10px;
+}
+.col2 ul{
+    @include flex(flex-start , center);
+    gap: 10px;
+    @include font-style(22px, 500, $primary-color2, "EudoxusSansRegular");
+}

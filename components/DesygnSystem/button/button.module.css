@@ -1,0 +1,57 @@
+/* @import '../../../styles/variables.css'; */
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: 'EudoxusSansRegular';
+    font-size: 16px;
+    border: 1px solid transparent;
+    color: white;
+    background-color: #191919;
+    margin: 3px;
+}
+.extraSmall{
+    padding: 6px 16px;
+}
+.small{
+    padding: 10px 16px;
+}
+.medium{
+    padding: 12px 29px;
+}
+.large{
+    padding: 14px 29px;
+}
+
+
+
+.clock{
+    display: none;
+}
+.left{
+    display: inline;
+    order: -1;
+}
+.right{
+    display: inline;
+    order: 1;
+}
+.none{
+    display: none;
+    
+} 
+
+.button:disabled,
+.button[disabled]{
+  border: 1px solid  #F7F7F7;
+  background-color:  #F7F7F7;
+  color: #999999;
+  cursor: default;
+}
+
+.button:disabled  .clock,
+.button[disabled]  .clock{
+    color: #191919;
+    /* border: 1px solid red; */
+}

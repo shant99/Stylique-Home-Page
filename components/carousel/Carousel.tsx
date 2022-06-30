@@ -1,20 +1,26 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable @next/next/no-img-element */
-import styles from './carousel.module.scss';
+import styles from "./carousel.module.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { v4 } from 'uuid';
-import Card from '../card/Card';
+import { v4 } from "uuid";
+import Card from "../card/Card";
+import { useRef } from "react";
+import ArrowLeft from "../icons/ArrowLeft";
+import ArrowRight from "../icons/ArrowRight";
 
 function Carousel({
   arr = [],
-  className = '',
+  className = "",
   imgClickHandler = undefined,
   slidesToShow = 4,
   dots = true,
-  slidesToScroll = 1
+  slidesToScroll = 1,
 }) {
-//   const { breakpoint1 } = responsive;
+  //   const { breakpoint1 } = responsive;
+
+  const ref: any = useRef(null);
   const settings = {
     arrows: true,
     infinite: true,
@@ -50,22 +56,36 @@ function Carousel({
       },
     ],
   };
+
+  const prevHandler = () => {
+    ref.current.slickPrev();
+  };
+  const nextHandler = () => {
+    ref.current.slickNext();
+  };
   return (
-    <Slider {...settings} className={styles["carousel"]}>
-      {arr.map((item:any) => {
+    <div>
+
+    <Slider ref={ref} {...settings} className={styles["carousel"]}>
+      {arr.map((item: any) => {
         return (
- 
-            <Card
-              title = {item?.title}
+          <Card
+            title={item?.title}
             cardPrice={item?.price}
-            tags ={item?.tags}
-            imageUrl = {item?.imageUrl} 
+            tags={item?.tags}
+            imageUrl={item?.imageUrl}
             key={v4()}
-            />
-  
+          />
         );
       })}
     </Slider>
+      <span onClick={prevHandler} className={styles["prev"]}>
+        <ArrowLeft />
+      </span>
+      <span onClick={nextHandler} className={styles["next"]}>
+        <ArrowRight />
+      </span>
+    </div>
   );
 }
 

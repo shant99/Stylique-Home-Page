@@ -1,0 +1,28 @@
+// import './button.css'
+// import styles from "./button.module.css";
+// import Clock from '../../icons/Clock'
+
+const buttonStyle = {
+  size: ["extraSmall", "small", "medium", "large"],
+  icon: ['none' , 'left' , 'right'] ,
+  variant: ["Primary"],
+};
+h
+
+function Button({
+  name = "button",
+  // size = 'Medium' ,
+  // icon = 'none' 
+}: any) {
+  return (
+        <button 
+        // className={styles['button'] + ' ' + styles[size] + ' '  + styles[icon]} 
+        >
+          <span>{name}</span>
+          {/* <span><Clock /></span> */}
+        </button>
+
+  );
+}
+
+export default Button;

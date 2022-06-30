@@ -1,4 +1,4 @@
-const ArrowLeft = () => {
+function ArrowRight() {
   return (
     <svg
       width="11"
@@ -7,9 +7,9 @@ const ArrowLeft = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M10 1L2 9L10 17" stroke="white" strokeWidth="2" />
+      <path d="M1 17L9 9L1 1" stroke="white" strokeWidth="2" />
     </svg>
   );
-};
+}
 
-export default ArrowLeft;
+export default ArrowRight
