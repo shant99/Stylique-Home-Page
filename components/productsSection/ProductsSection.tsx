@@ -15,13 +15,15 @@ const ProductsSection = ({ products }: any) => {
           Design-Insider & Produkte
           <br /> bekannter Architekturmarken
         </h2>
-        <Row gutter={[24, 24]} className={styles["products-cards"]}>
+        <Row gutter={[24, 24]} className={styles["products-cards"]}
+         
+        >
           {products.map((item: any) => {
             return (
               <Col key={v4()} 
               xl={{ span: 6 }}
               lg={{ span: 6 }}
-              xs={{ span: 8 }} 
+              xs={{ span: 12 }} 
               sm={{span: 8}}
               >
                 <Card

@@ -4,7 +4,7 @@ import styles from "./aboveHeader.module.scss";
 
 const AboveHeader: React.FC = () => {
   return (
-    <Layout className={styles["above-header-container"]}>
+    <div className={styles["above-header-container"]}>
       <Row>
         <Col span={24} className={styles["above-header"]}>
           Jetzt auch telefonisch bestellen:{" "}
@@ -18,7 +18,7 @@ const AboveHeader: React.FC = () => {
           </span>
         </Col>
       </Row>
-    </Layout>
+    </div>
   );
 };
 

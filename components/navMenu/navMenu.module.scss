@@ -18,6 +18,9 @@
 .content-one{
     display: none;
 }
+.content-one-a{
+    @include font-style(16px, 400, $primary-color2 , "EudoxusSansRegular");
+}
 .stylique-logo-wrapper{
     display: none;
 }

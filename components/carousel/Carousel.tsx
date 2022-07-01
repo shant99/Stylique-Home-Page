@@ -19,7 +19,7 @@ function Carousel({
   slidesToScroll = 1,
 }) {
   //   const { breakpoint1 } = responsive;
-
+  
   const ref: any = useRef(null);
   const settings = {
     arrows: true,
@@ -59,23 +59,26 @@ function Carousel({
 
   const prevHandler = () => {
     ref.current.slickPrev();
+    console.log(arr)
   };
   const nextHandler = () => {
     ref.current.slickNext();
   };
   return (
-    <div>
+    <div className={styles['carousel-wrapper']}>
 
     <Slider ref={ref} {...settings} className={styles["carousel"]}>
       {arr.map((item: any) => {
         return (
-          <Card
-            title={item?.title}
-            cardPrice={item?.price}
-            tags={item?.tags}
-            imageUrl={item?.imageUrl}
-            key={v4()}
-          />
+          <div key={v4()}>          
+            <Card
+              title={item?.title}
+              cardPrice={item?.price}
+              tags={item?.tags}
+              imageUrl={item?.imageUrl}
+              key={v4()}
+            />
+          </div>
         );
       })}
     </Slider>

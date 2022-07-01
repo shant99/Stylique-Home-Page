@@ -1,7 +1,9 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
 
-
+.carousel-section{
+   position: relative;
+}
 
 .carousel-section-title{
     @include font-style(32px, 400, $primary-color2, "EudoxusSansRegular");

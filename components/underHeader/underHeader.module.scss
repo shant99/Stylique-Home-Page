@@ -46,8 +46,18 @@
 
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  
+    .under-header{
+        height: 450px;
+    }
 }
 @media screen and (max-width: 768px) {
-
+    .under-header-h2{
+        font-size: 14px;
+    }
+    .under-header-h1{
+     font-size: 24px;
+    }
+    .under-header{
+        height: 380px;
+    }
 }

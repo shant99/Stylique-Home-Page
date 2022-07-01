@@ -2,7 +2,7 @@
 .button{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     font-family: 'EudoxusSansRegular';
     font-size: 16px;
@@ -11,6 +11,16 @@
     background-color: #191919;
     margin: 3px;
 }
+
+.button:hover{
+    background-color: #545A63;
+    color: white;
+    border: 1px solid transparent;
+}
+.button:hover .clock path{
+    fill: white;
+}
+
 .extraSmall{
     padding: 6px 16px;
 }
@@ -50,8 +60,28 @@
   cursor: default;
 }
 
-.button:disabled  .clock,
-.button[disabled]  .clock{
-    color: #191919;
+.button:disabled  .clock path,
+.button[disabled]  .clock path{
+    fill: #999999;
     /* border: 1px solid red; */
+}
+
+
+.outlineBlack{
+    background-color: white;
+    color: #191919;
+    border: 1px solid #191919;
+}
+.outlineBlack  .clock path{
+    fill: #191919;
+}
+
+.outlineWhite{
+    /* background-color: #191919; */
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+.outlineWhite  .clock path{
+    fill: white;
 }

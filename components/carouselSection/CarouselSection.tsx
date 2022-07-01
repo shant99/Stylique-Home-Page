@@ -8,15 +8,13 @@ const CarouselSection = ({ title = "carousel title", products = [] }:any) => {
   return (
     <section>
       <div className={sameStyles["container"]}>
-        <Row>
-          <Col>
+        <div className={styles["carousel-section"]}>
             <h2 className={styles["carousel-section-title"]}>{title}</h2>
             <Carousel 
                     arr={products}
                     dots={false}
                 />
-          </Col>
-        </Row>
+        </div>
       </div>
     </section>
   );

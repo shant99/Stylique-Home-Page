@@ -1,7 +1,37 @@
+@import "./styles/scss/variables.scss";
+@import "./styles/scss/mixins.scss";
 .desygn-system-container{
     display: flex;
     flex-direction: column;
 }
 .div{
     display: flex;
+}
+.components{
+    padding-bottom: 50px;
+}
+.components-buttons-wrapper{
+    
+}
+.components-buttons{
+    display: flex;
+    border: 1px dashed #7B61FF;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.buttons-outline-white{
+    background-color: #191919;
+}
+
+.components-buttons-info-p{
+    width: 377px;
+    @include font-style(16px, 500, $primary-color2, "EudoxusSansLight");
+}
+
+.components-inputs{
+    padding: 10px;
+    display: flex;
+    border: 1px dashed #7B61FF;
+    flex-wrap: wrap;
+    gap: 16px;
 }

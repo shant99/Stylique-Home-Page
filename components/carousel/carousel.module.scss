@@ -29,3 +29,17 @@
     align-items: center;
   }
   
+  .carousel-wrapper{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }

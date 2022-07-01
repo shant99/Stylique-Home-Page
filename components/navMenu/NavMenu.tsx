@@ -31,13 +31,13 @@ const ContentOne = () => {
     <div className={styles["content-one"]}>
       <ul>
         <li>
-          <a href="#">Für Architekten</a>
+          <a href="#" className={styles['content-one-a']}>Für Architekten</a>
         </li>
         <li>
-          <a href="#">Für Hersteller</a>
+          <a href="#" className={styles['content-one-a']}>Für Hersteller</a>
         </li>
         <li>
-          <a href="#">Für Händler</a>
+          <a href="#" className={styles['content-one-a']}>Für Händler</a>
         </li>
         <li>
           <span>
