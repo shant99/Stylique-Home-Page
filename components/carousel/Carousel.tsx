@@ -19,7 +19,7 @@ function Carousel({
   slidesToScroll = 1,
 }) {
   //   const { breakpoint1 } = responsive;
-  
+
   const ref: any = useRef(null);
   const settings = {
     arrows: true,
@@ -48,10 +48,18 @@ function Carousel({
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
     ],
@@ -59,29 +67,28 @@ function Carousel({
 
   const prevHandler = () => {
     ref.current.slickPrev();
-    console.log(arr)
+    console.log(arr);
   };
   const nextHandler = () => {
     ref.current.slickNext();
   };
   return (
-    <div className={styles['carousel-wrapper']}>
+    <div className={styles["carousel-wrapper"]}>
+      <Slider ref={ref} {...settings} className={styles["carousel"]}>
+        {arr.map((item: any) => {
+          return (
+   
+              <Card
+                title={item?.title}
+                cardPrice={item?.price}
+                tags={item?.tags}
+                imageUrl={item?.imageUrl}
+                key={v4()}
+              />
 
-    <Slider ref={ref} {...settings} className={styles["carousel"]}>
-      {arr.map((item: any) => {
-        return (
-          <div key={v4()}>          
-            <Card
-              title={item?.title}
-              cardPrice={item?.price}
-              tags={item?.tags}
-              imageUrl={item?.imageUrl}
-              key={v4()}
-            />
-          </div>
-        );
-      })}
-    </Slider>
+          );
+        })}
+      </Slider>
       <span onClick={prevHandler} className={styles["prev"]}>
         <ArrowLeft />
       </span>

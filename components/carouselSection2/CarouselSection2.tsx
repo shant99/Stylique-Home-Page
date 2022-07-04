@@ -11,10 +11,10 @@ const CarouselSection2 = ({ title = "carousel title", products = [] }:any) => {
         <Row>
           <Col>
             <h2 className={styles["carousel-section2-title"]}>{title}</h2>
-            <Carousel 
+            {/* <Carousel 
                     arr={products}
                     dots={false}
-                />
+                /> */}
           </Col>
         </Row>
       </div>

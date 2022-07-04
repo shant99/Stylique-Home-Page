@@ -43,24 +43,26 @@
     position: relative;
     width: 1400px;
   }
-
   @media screen and (min-width: 1201px) and (max-width: 1400px){
     .carousel{
-      max-width: 1201px;
+     width: 1201px;
+    }
+    .card-wrapper{
+      width: 25%;
     }
   }
-  @media screen and (min-width: 993px) and (max-width: 1200px){
-    .carousel{
-      max-width: 993px;
-    }
-  }
-  @media screen and (min-width: 769px) and (max-width: 992px) {
-    .carousel{
-      max-width: 769px;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .carousel{
-      max-width: 768px;
-    }
-  }
+  // @media screen and (min-width: 993px) and (max-width: 1200px){
+  //   .carousel{
+  //     max-width: 993px;
+  //   }
+  // }
+  // @media screen and (min-width: 769px) and (max-width: 992px) {
+  //   .carousel{
+  //     max-width: 769px;
+  //   }
+  // }
+  // @media screen and (max-width: 768px) {
+  //   .carousel{
+  //     max-width: 768px;
+  //   }
+  // }
