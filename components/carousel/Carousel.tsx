@@ -9,6 +9,7 @@ import Card from "../card/Card";
 import { useRef } from "react";
 import ArrowLeft from "../icons/ArrowLef";
 import ArrowRight from "../icons/ArrowRight";
+import {products} from './products'
 
 function Carousel({
   arr = [],
@@ -18,43 +19,8 @@ function Carousel({
   dots = true,
   slidesToScroll = 1,
 }) {
-  //   const { breakpoint1 } = responsive;
-
   const ref: any = useRef(null);
-  // var settings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 4,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //         infinite: true,
-  //         dots: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 769,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 2,
-  //         initialSlide: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1
-  //       }
-  //     }
-  //   ]
-  // };
+
   const settings = {
     arrows: true,
     infinite: true,
@@ -108,7 +74,7 @@ function Carousel({
   return (
     <div className={styles["carousel-wrapper"]}>
       <Slider ref={ref} {...settings} className={styles["carousel"]}>
-        {arr.map((item: any) => {
+        {products.map((item: any) => {
           return (
    
               <Card
