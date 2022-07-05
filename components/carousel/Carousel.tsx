@@ -64,9 +64,9 @@ function Carousel({
     ],
   };
 
+  console.log(arr);
   const prevHandler = () => {
     ref.current.slickPrev();
-    console.log(arr);
   };
   const nextHandler = () => {
     ref.current.slickNext();
