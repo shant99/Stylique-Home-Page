@@ -12,13 +12,13 @@ import ArrowRight from "../icons/ArrowRight";
 import {products} from './products'
 
 function Carousel({
-  arr = null,
+  arr ,
   className = "",
   imgClickHandler = undefined,
   slidesToShow = 4,
   dots = true,
   slidesToScroll = 1,
-}) {
+}:any) {
   const ref: any = useRef(null);
 
   const settings = {
