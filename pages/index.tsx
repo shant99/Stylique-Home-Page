@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   useEffect(()=>{
     fetchProducts()
 
-  } ,[])
+  } , [products ])
   return (
     <div className={styles["home-page-container"]}>
       <AboveHeader />
