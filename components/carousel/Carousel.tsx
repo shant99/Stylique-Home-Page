@@ -74,7 +74,7 @@ function Carousel({
   return (
     <div className={styles["carousel-wrapper"]}>
       <Slider ref={ref} {...settings} className={styles["carousel"]}>
-        {products.map((item: any) => {
+        {arr.map((item: any) => {
           return (
    
               <Card
