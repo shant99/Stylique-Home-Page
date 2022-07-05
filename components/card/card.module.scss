@@ -3,7 +3,9 @@
 .card{
     position: relative;
     cursor: pointer;
-    max-width: 330px;
+    width: auto;
+    height: auto;
+    margin: 0 5px;
 }
 .card:hover{
     .card-img{
@@ -14,7 +16,6 @@
     }
 }
 .card-img-wrapper{
-    width: 100%;
     max-height: 340px;
     position: relative;
     background-color: gray;
@@ -23,7 +24,7 @@
     cursor: pointer;
     .card-img{
         width: 100%;
-        max-height: 340px;
+        height: auto;
         transition: 0.3s ease 0s;
         z-index: 4;
         object-fit: contain;
@@ -81,21 +82,21 @@
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
     .card{
-        max-width: 250px;
+        // max-width: 250px;
     }
     .card-img-wrapper{
-        width: 100%;
-        height: auto;
-        max-height: 250px;
+        // width: 100%;
+        // max-height: 250px;
     }
 }
 @media screen and (max-width: 768px) {
     .card{
-        max-width: 169px;
+        // max-width: 169px;
     }
     .card-img-wrapper{
-        width: 100%;
-        max-height: 169px;
+        // width: 100%;
+        // max-height: 169px;
+        
     }
     .card-title{
        font-size: 14px;

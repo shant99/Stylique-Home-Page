@@ -12,6 +12,9 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .under-header::after{
     content: "";

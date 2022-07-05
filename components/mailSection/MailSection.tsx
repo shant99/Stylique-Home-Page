@@ -10,7 +10,12 @@ const MailSection = () => {
     <section>
       <div className={sameStyles["container"]}>
         <Row className={styles["mail-section"]}>
-          <Col lg={{ span: 14 }} xl={{ span: 14 }} >
+          <Col
+            lg={{ span: 14 }}
+            xl={{ span: 14 }}
+            md={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
             <div className={styles["mail-section-img-wrapper"]}>
               <h3 className={styles["mail-section-under-title"]}>
                 Exklusiv für Architekten & Designer
@@ -21,7 +26,7 @@ const MailSection = () => {
               </h2>
             </div>
           </Col>
-          <Col lg={{ span: 10 }} xl={{ span: 10 }}>
+          <Col lg={{ span: 10 }} xl={{ span: 10 }} md={{ span: 14 }}>
             <div className={styles["mail-form"]}>
               <h2 className={styles["mail-form-title"]}>
                 Jetzt Newsletter abonnieren

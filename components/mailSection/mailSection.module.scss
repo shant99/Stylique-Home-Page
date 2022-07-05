@@ -1,22 +1,23 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
 .mail-section{
-    margin-bottom: 96px;
+    margin: 96px 0;
     width: 100%;
     display: flex;
-    // border: 1px solid red;
     justify-content: flex-start;
 }
 .mail-section-img-wrapper{
     background-image: url('/Rectangle4.png');
-    width: auto;
+    width: 100%;
     height: 361px;
     position: relative;
     padding: 48px;
     @include flex(flex-end , flex-start);
     flex-direction: column;
     overflow: hidden;
-    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .mail-section-img-wrapper::after{
     content: "";
@@ -39,7 +40,7 @@
 }
 .mail-form{
     width: auto;
-    padding-left: 50px
+    margin-left: 15px;
 }
 .mail-form-title{
     @include font-style(32px, 400, $primary-color2 ,"EudoxusSansLight");
@@ -75,8 +76,12 @@
 
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  
+    .mail-form{
+        margin-left: 0px;
+    }
 }
 @media screen and (max-width: 768px) {
-
+    .mail-form{
+        margin-left: 0px;
+    }
 }

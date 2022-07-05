@@ -1,13 +1,12 @@
 @import "../../styles/scss/variables.scss";
 @import "../../styles/scss/mixins.scss";
-
 .companies{
+    width: 100%;
     padding-top: 50px;
     margin-bottom: 96px;
     @include flex(center , center) ;
     flex-direction: column;
-    overflow-x: scroll;
-    width: 100%;
+    overflow: hidden;
 }
 .companies-header{
     @include font-style(32px, 500, $primary-color2, "EudoxusSansRegular");
@@ -15,12 +14,26 @@
     @include flex(center , center)
 }
 .companies-list{
-    @include flex(flex-start , flex-start) ;
+    @include flex(flex-start , center) ;
     gap: 35px;
-    overflow-x: scroll;
+    overflow: hidden;
+    overflow-x: scroll ;
+    overflow-block: scroll;
     width: 100%;
+    padding: 20px;
 }
+.companies-list::-webkit-scrollbar {
+    width: 1px;
+    -webkit-appearance:none;
+}
+.companies-list::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
 .companie{
+    position: relative;
     min-width: 200px;
     min-height: 200px;
     background-color: $primary-color5;
@@ -34,31 +47,11 @@
     transition-duration: 0.3s;
 }
 @media screen and (min-width: 993px) and (max-width: 1200px){
-    .companies-container{
-        margin-bottom: 60px;
-    }
-    .companies-header{
-        margin-bottom: 15px;
-    }
-    .companies-list{
-        max-width: 1200px;
-    }
-    .companie{
-        width: 130px;
-        height: 130px;
-    }
+
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    .companies-list{
-        max-width: 990px;
-    }
+
 }
 @media screen and (max-width: 768px) {
-    .companies-list{
-        max-width: 760px;
-    }
-    .companie{
-        width: 100px;
-        height: 100px;
-    }
+
 }

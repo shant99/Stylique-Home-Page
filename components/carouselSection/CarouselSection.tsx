@@ -10,10 +10,10 @@ const CarouselSection = ({ title = "carousel title", products = [] }:any) => {
       <div className={sameStyles["container"]}>
         <div className={styles["carousel-section"]}>
             <h2 className={styles["carousel-section-title"]}>{title}</h2>
-            {/* <Carousel 
+            <Carousel 
                     arr={products}
                     dots={false}
-                /> */}
+                />
         </div>
       </div>
     </section>
