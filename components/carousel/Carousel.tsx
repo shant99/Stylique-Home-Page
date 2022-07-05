@@ -12,7 +12,7 @@ import ArrowRight from "../icons/ArrowRight";
 import {products} from './products'
 
 function Carousel({
-  arr = [],
+  arr = null,
   className = "",
   imgClickHandler = undefined,
   slidesToShow = 4,
