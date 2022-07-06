@@ -19,18 +19,18 @@
     overflow: hidden;
     overflow-x: scroll ;
     overflow-block: scroll;
-    width: 100%;
+    width: 100vw;
     padding: 20px;
 }
-.companies-list::-webkit-scrollbar {
-    width: 1px;
-    -webkit-appearance:none;
-}
-.companies-list::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-}
+// .companies-list::-webkit-scrollbar {
+//     width: 1px;
+//     -webkit-appearance:none;
+// }
+// .companies-list::-webkit-scrollbar-thumb {
+//     border-radius: 4px;
+//     background-color: rgba(0,0,0,.5);
+//     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+// }
 
 .companie{
     position: relative;
